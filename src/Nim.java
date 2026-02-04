@@ -10,6 +10,11 @@ public class Nim {
              userTurn=true;
             System.out.println("The number of sticks remaining is "+sticks+". How many sticks do you want to take?");
             int userSticks = input.nextInt();
+            if(userTurn=true){
+                System.out.println("User Wins!");
+            }else{
+                System.out.println("User Lost :(");
+            }
             while (userSticks !=1 && userSticks != 2){
                 System.out.println("You may only print 1 or 2 sticks. Please type 1 or 2.");
                 userSticks = input.nextInt();
@@ -25,7 +30,7 @@ public class Nim {
             userTurn = false;
             int num=(int)(Math.random()*2)+1;
             if (sticks ==1 && num !=1){
-                System.out.println("jThe computer can only print one stick because there is only one stick remaining");
+                System.out.println("The computer can only print one stick because there is only one stick remaining");
                 num =1;
             }
             sticks = sticks-num;
